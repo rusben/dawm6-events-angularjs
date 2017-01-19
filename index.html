@@ -65,26 +65,7 @@
 	</div>
 
     <div class="container" ng-controller="EventsController as EventsCtrl">
-		<div ng-show="action==='init'">
 <!-- 
-	ng-blur
-	ng-change
-	ng-click
-	ng-copy
-	ng-cut
-	ng-dblclick
-	ng-focus
-	ng-keydown
-	ng-keypress
-	ng-keyup
-	ng-mousedown
-	ng-mouseenter
-	ng-mouseleave
-	ng-mousemove
-	ng-mouseover
-	ng-mouseup
-	ng-paste
-
 	http://www.w3schools.com/angular/angular_events.asp
 
 	Mouse Events
@@ -104,166 +85,164 @@
 
 	You can add mouse events on any HTML element.
  -->
- 			<div class="panel panel-default">
- 				<div class="panel-heading">
-					Increase the count variable when the mouse moves over the H1 element.
- 				</div>
- 				<div class="panel-body">
-					<h1 ng-mouseover="countMouseOver= countMouseOver + 1"> Mouse over me! </h1>
- 					<h2> Mouse Over Count: {{countMouseOver}} </h2>
- 				</div>
- 			</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			Increase the count variable when the mouse moves over the H1 element.
+			</div>
+			<div class="panel-body">
+				<h1 ng-mouseover="countMouseOver= countMouseOver + 1"> Mouse over me! </h1>
+				<h2> Mouse Over Count: {{countMouseOver}} </h2>
+			</div>
+		</div>
 
- 			<div class="panel panel-default">
- 				<div class="panel-heading">
-					Increase the count variable when the mouse moves over the H1 element.
- 				</div>
- 				<div class="panel-body">
-					<h1 ng-click="countMouseClick= countMouseClick + 1"> Click me! </h1>
-	 				<h2> Mouse Click Count: {{countMouseClick}} </h2>
- 				</div>
- 			</div>
- 			
- 			<div class="panel panel-default">
- 				<div class="panel-heading">
-					You can also refer to a function when the event occurs.
- 				</div>
- 				<div class="panel-body">
-					<h1 ng-dblclick="mouseDoubleClick()" > Double Click me! </h1>
-	 				<h2> Mouse Double Click Count: {{countMouseDoubleClick}} </h2>
- 				</div>
- 			</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			Increase the count variable when the mouse moves over the H1 element.
+			</div>
+			<div class="panel-body">
+				<h1 ng-click="countMouseClick= countMouseClick + 1"> Click me! </h1>
+				<h2> Mouse Click Count: {{countMouseClick}} </h2>
+			</div>
+		</div>
+		
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			You can also refer to a function when the event occurs.
+			</div>
+			<div class="panel-body">
+				<h1 ng-dblclick="mouseDoubleClick()" ng-init="countMouseDoubleClick=0"> Double Click me! </h1>
+				<h2> Mouse Double Click Count: {{countMouseDoubleClick}} </h2>
+			</div>
+		</div>
 
- 			<div class="panel panel-default">
- 				<div class="panel-heading">
-					If you want to show a section of HTML code when a button is clicked, and hide when the button is clicked again, like a dropdown menu, make the button behave like a toggle switch.
- 				</div>
- 				<div class="panel-body">
-					<button ng-click="showMenu()" >Click me!</button>
-					<div ng-show="showMe">
-					    <h1>Menu:</h1>
-					    <div>Pizza</div>
-					    <div>Pasta</div>
-					    <div>Pesce</div>
-					</div>
- 				</div>
- 			</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+			If you want to show a section of HTML code when a button is clicked, and hide when the button is clicked again, like a dropdown menu, make the button behave like a toggle switch.
+			</div>
+			<div class="panel-body">
+			<button ng-click="showMenu()" >Click me!</button>
+			<div ng-show="showMe">
+			    <h1>Menu:</h1>
+			    <div>Pizza</div>
+			    <div>Pasta</div>
+			    <div>Pesce</div>
+			</div>
+			</div>
+		</div>
 
-			<div class="panel panel-default">
- 				<div class="panel-heading">
-					$event Object <br/>
-					You can pass the $event object as an argument when calling the function.
-					The $event object contains the browser's event object.
- 				</div>
- 				<div class="panel-body">
-					<h1 ng-mousemove="updateCoordinates($event)" >Mouse Over Me!</h1>
-					<p>Coordinates: {{x + ', ' + y}}</p>
- 				</div>
- 			</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				$event Object <br/>
+				You can pass the $event object as an argument when calling the function.
+				The $event object contains the browser's event object.
+			</div>
+			<div class="panel-body">
+				<h1 ng-mousemove="updateCoordinates($event)" >Mouse Over Me!</h1>
+				<p>Coordinates: {{x + ', ' + y}}</p>
+			</div>
+		</div>
 
-			<div class="panel panel-default">
- 				<div class="panel-heading">
-					AngularJS ng-keypress Directive. Execute an expression at every keystroke.
- 				</div>
- 				<div class="panel-body">
-					<input ng-keypress="keyUpCount = keyUpCount + 1"/>
-					<h1>{{keyUpCount}}</h1>
- 				</div>
- 			</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				AngularJS ng-keypress Directive. Execute an expression at every keystroke.
+			</div>
+			<div class="panel-body">
+				<input ng-keypress="keyUpCount = keyUpCount + 1"/>
+				<h1>{{keyUpCount}}</h1>
+			</div>
+		</div>
 
-			<div class="panel panel-default">
- 				<div class="panel-heading">
-					keypress event. Write something and see the event object in the console.
- 				</div>
- 				<div class="panel-body">
-					Write something: <input type="text" ng-keyup="keyPressed($event)"\>
- 				</div>
- 			</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				keypress event. Write something and see the event object in the console.
+			</div>
+			<div class="panel-body">
+				Write something: <input type="text" ng-keyup="keyPressed($event)"\>
+			</div>
+		</div>
 
-			<div class="panel panel-default">
- 				<div class="panel-heading">
-					<p><strong>Exercise 1</strong></p>
-					<p>When the mouse is over exercise1-a show the div border.</p>
-					<p>When the mouse enters in exercise1-b show the ul inside until it leaves.</p>
-					<p>When the mouse enters exercise1-c change background div to green until the mouse enters again in the div.</p>
- 				</div>
- 				<div class="panel-body">
-					<div id="exercise1-a">Hello</div>
-					<div id="exercise1-b">
-						<ul>
-							<li>This</li>
-							<li>is</li>
-							<li>a</li>
-							<li>menu</li>
-						</ul>
-					</div>
-					<div id="exercise1-b">World!</div>
-					
- 				</div>
- 			</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<p><strong>Exercise 1</strong></p>
+				<p>When the mouse is over exercise1-a show the div border.</p>
+				<p>When the mouse enters in exercise1-b show the ul inside until it leaves.</p>
+				<p>When the mouse enters exercise1-c change background div to green until the mouse enters again in the div.</p>
+			</div>
+			<div class="panel-body">
+				<div id="exercise1-a">Hello</div>
+				<div id="exercise1-b">
+					Enter the mouse here.
+					<ul>
+						<li>This</li>
+						<li>is</li>
+						<li>a</li>
+						<li>menu</li>
+					</ul>
+				</div>
+				<div id="exercise1-b">World!</div>
+			</div>
+		</div>
 
 
-			<div class="panel panel-default">
- 				<div class="panel-heading">
-					<p><strong>Exercise 2</strong></p>
-					<p>Calculate the distance (pixels) between two clicks inside the exercise2-a </p>
- 				</div>
- 				<div id="exercise2-a" class="panel-body">
-							<br/>
-							<br/>
-							<br/>
- 				</div>
- 			</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<p><strong>Exercise 2</strong></p>
+				<p>Calculate the distance (pixels) between two clicks inside the exercise2-a </p>
+			</div>
+			<div id="exercise2-a" class="panel-body">
+						<br/>
+						<br/>
+						<br/>
+			</div>
+		</div>
 
-			<div class="panel panel-default">
- 				<div class="panel-heading">
-					<p><strong>Exercise 3</strong></p>
-					<p>Show an alert when the key A is pressed.</p>
- 				</div>
- 				<div class="panel-body">
-					<input type="text"/>
- 				</div>
- 			</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<p><strong>Exercise 3</strong></p>
+				<p>Show an alert when the key A is pressed.</p>
+			</div>
+			<div class="panel-body">
+				<input type="text"/>
+			</div>
+		</div>
 
-			<div class="panel panel-default">
- 				<div class="panel-heading">
-					<p><strong>Exercise 4</strong></p>
-					<p>Count the characters in the input (without using lenght or size functions) just controlling when backstroke occurs.</p>
- 				</div>
- 				<div class="panel-body">
-					<input type="text"/>
- 				</div>
- 			</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<p><strong>Exercise 4</strong></p>
+				<p>Count the characters in the input (without using lenght or size functions) just controlling when backstroke occurs.</p>
+			</div>
+			<div class="panel-body">
+				<input type="text"/>
+			</div>
+		</div>
 
-			<div class="panel panel-default">
- 				<div class="panel-heading">
-					<p><strong>Exercise 5</strong></p>
-					<p>Show an error when the user leaves the exercise5-a without writting a number.</p>
-					<p>Show an error when exercise5-b loses the focus with more than 10 characters.</p>
-					<p>Show an alert when exercise5-c and exercise5-d are equals and different from empty string. </p>
- 				</div>
- 				<div class="panel-body">
-					<input id="exercise5-a" type="text"/>
-					<input id="exercise5-b" type="text"/>
-					<input id="exercise5-c" type="text"/>
-					<input id="exercise5-d" type="text"/>
- 				</div>
- 			</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<p><strong>Exercise 5</strong></p>
+				<p>Show an error when the user leaves the exercise5-a without writting a number.</p>
+				<p>Show an error when exercise5-b loses the focus with more than 10 characters.</p>
+				<p>Show an alert when exercise5-c and exercise5-d are equals and different from empty string. </p>
+			</div>
+			<div class="panel-body">
+				<input id="exercise5-a" type="text"/>
+				<input id="exercise5-b" type="text"/>
+				<input id="exercise5-c" type="text"/>
+				<input id="exercise5-d" type="text"/>
+			</div>
+		</div>
 
-			<div class="panel panel-default">
- 				<div class="panel-heading">
-					<p><strong>Exercise 6</strong></p>
-					<p>Show an error when triyng to copy some content in the page.</p>
- 				</div>
- 				<div class="panel-body">
- 					In the whole page!
- 				</div>
- 			</div>
-
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<p><strong>Exercise 6</strong></p>
+				<p>Show an error when triyng to copy some content in the page.</p>
+			</div>
+			<div class="panel-body">
+					In the whole page!
+			</div>
 		</div>
 
 		<footer>
-		<p class="text-right">Reference: <a href="http://www.w3schools.com/angular/angular_events.asp">http://www.w3schools.com/angular/angular_events.asp</a></p>
+			<p class="text-right">Reference: <a href="http://www.w3schools.com/angular/angular_events.asp">http://www.w3schools.com/angular/angular_events.asp</a></p>
 			<br/><p>© 2017 DAW-M06, Institut Provençana.</p>
 		</footer>
     </div>

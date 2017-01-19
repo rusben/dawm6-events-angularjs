@@ -12,11 +12,11 @@ https://rusben.github.io/dawm6-events-angularjs/
 
   ng-blur
 
-  ng-controller
-
   ng-change
 
   ng-click
+
+  ng-controller
 
   ng-copy
 

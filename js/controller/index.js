@@ -4,7 +4,7 @@ angular.module('EventsApp').controller('EventsController', ['$scope', '$window',
 
     // Controller properties
     // Scope variables
-    // action: {"init", "add-films"}
+    // action: {"init"}
     $scope.action = "init";   
     
     $scope.mouseDoubleClick = function() {
